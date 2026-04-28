@@ -13,14 +13,14 @@ main{
     font-family: "Roboto", sans-serif;
 }
 
-@font-face{
+/* @font-face{
     font-family: "roboto" ;
     src: url("") format("truetype");
 }
 
 .font-roboto{
     font-family: "roboto";
-}
+} */
 
 /* .montserrat{
   font-family: "Montserrat", sans-serif;
@@ -81,6 +81,10 @@ header nav{
 /*padding à gauche du logo*/
 #logo{
     margin-left: 60px;
+}
+
+#logo a img{
+    margin: auto;
 }
 
 /*Taille de toutes les icones*/
