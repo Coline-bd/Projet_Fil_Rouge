@@ -1,0 +1,221 @@
+body{
+    background-color: #1E1F24;
+    color: #FCFCFF;
+    margin: 0;
+}
+
+/*Disposition des éléments du main en 3 sections*/
+main{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1E1F24;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+@font-face{
+    font-family: "roboto" ;
+    src: url("") format("truetype");
+}
+
+.font-roboto{
+    font-family: "roboto";
+}
+
+/* .montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/*Centrer les titres 2*/
+h2{
+    text-align: center;
+    border-bottom: #FCFCFF solid 1px;
+    padding-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*enlever les puces des listes et modifier le padding*/
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* a{
+    color: #FCFCFF;
+} */
+
+a{
+    text-decoration: none;
+    color: #FCFCFF;
+}
+
+
+/*Header------------------------------------------*/
+header{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    border-bottom: #C2A7FC solid 1px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Enlever le soulignage des liens*/
+/* header a{
+    text-decoration: none;
+} */
+
+/*padding à droite de la nav compte et notif*/
+header nav{
+    display: flex;
+    margin-right: 3vw;
+    padding: 5px;
+    gap:50px;
+}
+
+
+/*padding à gauche du logo*/
+#logo{
+    margin-left: 60px;
+}
+
+/*Taille de toutes les icones*/
+.icone{
+    margin: 1px;
+    width: 31px;
+    height: 31px;
+}
+
+
+/*Section de navigation---------------------------------------*/
+
+/*largeur de la section de gauche*/
+#sectionNav{
+    width: 16.18vw;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*marge sur la barre de navigation*/
+#navBarre{
+    margin: 30px 0 30px 0;
+}
+
+/*largeur d'un élément de la barre de navigation*/
+#navBarre li{
+    width: 100%;
+}
+
+/*alignement au sein d'un élément de la barre de navigation*/
+#navBarre a{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+/*action au survol de la nav*/
+#navBarre a:hover{
+    border-right: #C2A7FC 2px solid;
+    background-color: #292b31;
+    transform: scale(1.05);
+    color: #C2A7FC;
+
+}
+
+/* marge entre icone nav et texte nav*/
+#navBarre span{
+    padding-left: 15px;
+}
+
+
+/*Partie légal de la section de naviation------------------------------*/
+
+/*enlevber la marge auto de la liste*/
+#legal ul{
+    padding-left: 0;
+}
+
+#legal a{
+    text-decoration: underline;
+}
+/*Marge de la partie Légal*/
+#legal{
+    padding-left: 15px;
+}
+
+
+ /*Section principale-----------------*/
+
+#sectionPrincipale{
+    width: 53.47vw;
+}
+
+.pseudo{
+    color: #C2A7FC;
+}
+
+.entete{
+    display: flex;
+}
+
+h3,h5{
+    margin: 5px;
+}
+
+.couvertureMiniature{
+    width: 84px;
+    height: 120px;
+}
+
+.entete div:nth-of-type(2){
+    width: 100%;
+}
+
+.iconesComment{
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: #545454 solid 1px;
+}
+
+.iconesComment span{
+    margin-right: 30px;
+}
+
+
+/*Section de droite-Nouveautés--------------*/
+
+/*définir la largeur de la section de droite*/
+section:nth-of-type(2){
+    width: 16.18vw;
+}
+
+/*définir l'alignement des éléments dans la section de droite*/
+#sectionSecondaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.iconeText{
+    display: flex;
+    align-items: center;
+}
+
+.iconeText span{
+    margin-left:5px ;
+}
+
+.iconesMiniature{
+    display: flex;
+    justify-content: space-between;
+}
+
