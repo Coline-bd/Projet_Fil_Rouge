@@ -2,23 +2,27 @@ body{
     background-color: #1E1F24;
     color: #FCFCFF;
     margin: 0;
+    min-height: 100vh;
 }
 
 /*Disposition des éléments du main en 3 sections*/
 main{
     display: flex;
     justify-content: space-between;
-    background-color: #1E1F24;
-    width: 100%;
     font-family: "Roboto", sans-serif;
 }
 
 /* @font-face{
     font-family: "roboto" ;
-    src: url("") format("truetype");
-}
+    src: url("../assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+} */
 
-.font-roboto{
+/* @font-face {
+    font-family: "montserrat";
+    src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+} */
+
+/* .font-roboto{
     font-family: "roboto";
 } */
 
@@ -35,13 +39,15 @@ h2{
     border-bottom: #FCFCFF solid 1px;
     padding-bottom: 5px;
     font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
 }
 
 /*enlever les puces des listes et modifier le padding*/
 
-ul{
+nav ul{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 /* a{
@@ -56,40 +62,33 @@ a{
 
 /*Header------------------------------------------*/
 header{
+    display: flex;
     align-items: center;
-    width: 100%;
-    display: flex;
-    border-bottom: #C2A7FC solid 1px ;
-    display: flex;
     justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 6vh;
+    border-bottom: #C2A7FC solid 1px ;
+    position: sticky;
+    top:0vh;
+    background-color: #1E1F24;
 }
 
-/*Enlever le soulignage des liens*/
-/* header a{
-    text-decoration: none;
-} */
-
-/*padding à droite de la nav compte et notif*/
+/*nav compte et notif*/
 header nav{
     display: flex;
-    margin-right: 3vw;
-    padding: 5px;
-    gap:50px;
+    justify-content: center;
+    gap: 3rem;
 }
 
 
-/*padding à gauche du logo*/
-#logo{
-    margin-left: 60px;
+/*pour que l'image se comporte comme un block et prenne tout le contenant de a*/
+a img{
+    display: block;
 }
 
-#logo a img{
-    margin: auto;
-}
-
-/*Taille de toutes les icones*/
-.icone{
-    margin: 1px;
+/*Taille des les icones*/
+.iconeheader{
     width: 31px;
     height: 31px;
 }
@@ -99,79 +98,95 @@ header nav{
 
 /*largeur de la section de gauche*/
 #sectionNav{
-    width: 16.18vw;
-    height: 92vh;
+    min-width: 220px;
+    height: calc(94vh - 1px);
+    /* height: calc(100vh - var(--header-height)); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     font-family: "Montserrat", sans-serif;
+    position: sticky;
+    top: calc(6vh + 1px);
 }
 
 /*marge sur la barre de navigation*/
 #navBarre{
-    margin: 30px 0 30px 0;
+    margin: 30px 0;
 }
 
 /*largeur d'un élément de la barre de navigation*/
 #navBarre li{
-    width: 100%;
+    /* width: 100%; */
 }
 
 /*alignement au sein d'un élément de la barre de navigation*/
 #navBarre a{
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 1rem;
 }
 
 /*action au survol de la nav*/
 #navBarre a:hover{
     border-right: #C2A7FC 2px solid;
     background-color: #292b31;
-    transform: scale(1.05);
     color: #C2A7FC;
-
+    font-weight: 500;
 }
 
 /* marge entre icone nav et texte nav*/
 #navBarre span{
-    padding-left: 15px;
+    padding-left: 1rem;
 }
 
 
 /*Partie légal de la section de naviation------------------------------*/
 
-/*enlevber la marge auto de la liste*/
-#legal ul{
-    padding-left: 0;
-}
-
 #legal a{
     text-decoration: underline;
 }
+
 /*Marge de la partie Légal*/
 #legal{
-    padding-left: 15px;
+    padding-left: 1rem;
+    margin-bottom:1rem;
+    font-size: 14px;
 }
 
 
- /*Section principale-----------------*/
+/*Section principale-----------------*/
 
 #sectionPrincipale{
-    width: 53.47vw;
+    flex-basis: 53vw;
+    margin: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .pseudo{
     color: #C2A7FC;
+    font-family: "montserrat",sans-serif;
+    font-size: large;
+}
+
+.date{
+    font-size: medium;
+    color: #D2D2D2;
 }
 
 .entete{
     display: flex;
+    gap: 1rem ;
 }
 
-h3,h5{
-    margin: 5px;
+.detailcomment{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    line-height: 1.5rem;
 }
 
 .couvertureMiniature{
@@ -179,26 +194,30 @@ h3,h5{
     height: 120px;
 }
 
-.entete div:nth-of-type(2){
-    width: 100%;
+article p{
+    margin-bottom: 0;
 }
 
 .iconesComment{
     display: flex;
-    padding-bottom: 5px;
+    /* padding-bottom: 1rem; */
+    gap: 30px;
     border-bottom: #545454 solid 1px;
 }
 
-.iconesComment span{
-    margin-right: 30px;
+.iconesComment a{
+    padding: 1rem;
 }
-
+.iconesComment a:hover{
+    background-color: #292b31;
+}
 
 /*Section de droite-Nouveautés--------------*/
 
 /*définir la largeur de la section de droite*/
-section:nth-of-type(2){
+main section:nth-of-type(2){
     width: 16.18vw;
+    min-width: 220px;
 }
 
 /*définir l'alignement des éléments dans la section de droite*/
@@ -207,19 +226,28 @@ section:nth-of-type(2){
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 2rem;
 }
 
 .iconeText{
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.iconeText span{
-    margin-left:5px ;
+.livreminiature{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    max-width: 150px;
 }
 
 .iconesMiniature{
     display: flex;
     justify-content: space-between;
+    padding: 0.2rem;
 }
 
+.couverture{
+    max-width: 150px;
+}
