@@ -27,10 +27,10 @@ main{
 } */
 
 /* .montserrat{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
 } */
 
 /*Centrer les titres 2*/
@@ -74,14 +74,29 @@ header{
     background-color: #1E1F24;
 }
 
+
+
 /*nav compte et notif*/
 header nav{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
 
+menu{
+    display: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
 
+
+menu svg{
+    display: block;
+    fill: #FCFCFF;
+}
 /*pour que l'image se comporte comme un block et prenne tout le contenant de a*/
 a img{
     display: block;
@@ -191,6 +206,14 @@ a img{
     line-height: 1.5rem;
 }
 
+.detailcomment a{
+    align-self: flex-start;
+}
+
+.detailcomment a:hover{
+    text-decoration: underline;
+}
+
 .couvertureMiniature{
     width: 84px;
     height: 120px;
@@ -210,9 +233,9 @@ article p{
 .iconesComment a{
     padding: 1rem;
 }
-.iconesComment a:hover{
+/* .iconesComment a:hover{
     background-color: #292b31;
-}
+} */
 
 /*Section de droite-Nouveautés--------------*/
 
@@ -236,6 +259,12 @@ main section:nth-of-type(2){
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    border-radius: 2px;
+}
+
+.iconeText:hover{
+    text-decoration: underline;
+    background-color: #292b31;
 }
 
 .livreminiature{
@@ -258,12 +287,20 @@ main section:nth-of-type(2){
 
 /*RESPONSIVE-----------------------------------------------------------------*/
 /*mobile*/
-@media (max-width: 390px){}
+/* @media (max-width: 390px){} */
 
 /*tablette*/
 @media (max-width: 640px){
     #sectionNav{
         display: none;
+    }
+    menu{
+        display: block;
+        
+    }
+    header{
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -286,8 +323,8 @@ main section:nth-of-type(2){
 }
 }
 
-@media (min-width: 1280px){
+/* @media (min-width: 1280px){
 
 }
 
-@media (min-width: 1536px){}
+@media (min-width: 1536px){} */
