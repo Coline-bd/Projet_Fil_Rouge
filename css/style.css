@@ -108,6 +108,7 @@ a img{
     font-family: "Montserrat", sans-serif;
     position: sticky;
     top: calc(6vh + 1px);
+    left: 0px;
 }
 
 /*marge sur la barre de navigation*/
@@ -158,7 +159,8 @@ a img{
 /*Section principale-----------------*/
 
 #sectionPrincipale{
-    flex-basis: 53vw;
+    /* flex-basis: 53vw; */
+    flex : 0 0.7 53vw;
     margin: 0rem 2rem;
     display: flex;
     flex-direction: column;
@@ -216,8 +218,9 @@ article p{
 
 /*définir la largeur de la section de droite*/
 main section:nth-of-type(2){
-    width: 16.18vw;
-    min-width: 220px;
+    /* width: 16vw; */
+    flex : 0.2 1 16vw;
+    /* min-width: 220px; */
 }
 
 /*définir l'alignement des éléments dans la section de droite*/
@@ -251,3 +254,40 @@ main section:nth-of-type(2){
 .couverture{
     max-width: 150px;
 }
+
+
+/*RESPONSIVE-----------------------------------------------------------------*/
+/*mobile*/
+@media (max-width: 390px){}
+
+/*tablette*/
+@media (max-width: 640px){
+    #sectionNav{
+        display: none;
+    }
+}
+
+/* @media (min-width: 768px){
+    
+} */
+
+/*PC portable*/
+@media (max-width: 1024px){
+    main section:nth-of-type(2){
+        display: none
+    }
+    main{
+        /* justify-content: center; */
+    }
+    #sectionPrincipale{
+        margin: auto;
+        flex: 0.9;
+    
+}
+}
+
+@media (min-width: 1280px){
+
+}
+
+@media (min-width: 1536px){}
