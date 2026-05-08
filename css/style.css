@@ -84,7 +84,7 @@ header nav{
     gap: 3rem;
 }
 
-menu{
+#menu{
     display: none;
     margin: 0;
     padding: 0;
@@ -157,14 +157,14 @@ a img{
 }
 
 
-/*Partie légal de la section de naviation------------------------------*/
+/*Footer de la section de naviation------------------------------*/
 
-#legal a{
+footer a{
     text-decoration: underline;
 }
 
-/*Marge de la partie Légal*/
-#legal{
+/*Marge du footer*/
+footer{
     padding-left: 1rem;
     margin-bottom:1rem;
     font-size: 14px;
@@ -198,12 +198,16 @@ a img{
     gap: 1rem ;
 }
 
+.photoProfil img{
+    width: 55px;
+}
+
 .detailcomment{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     flex-grow: 1;
-    line-height: 1.5rem;
+    line-height: 1rem;
 }
 
 .detailcomment a{
@@ -215,8 +219,8 @@ a img{
 }
 
 .couvertureMiniature{
-    width: 84px;
-    height: 120px;
+    width: 74px;
+    height: 110px;
 }
 
 article p{
@@ -240,7 +244,7 @@ article p{
 /*Section de droite-Nouveautés--------------*/
 
 /*définir la largeur de la section de droite*/
-main section:nth-of-type(2){
+aside{
     /* width: 16vw; */
     flex : 0.2 1 16vw;
     /* min-width: 220px; */
@@ -287,10 +291,25 @@ main section:nth-of-type(2){
 
 /*RESPONSIVE-----------------------------------------------------------------*/
 /*mobile*/
-/* @media (max-width: 390px){} */
+@media (max-width: 767.99px){
+    #sectionNav{
+        display: none;
+    }
+    menu{
+        display: block;
+        
+    }
+    header{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    header nav{
+        gap: 1.5rem
+    }
+}
 
-/*tablette*/
-@media (max-width: 640px){
+/*Petit écran*/
+@media (min-width:576px) and (max-width: 768px){
     #sectionNav{
         display: none;
     }
@@ -302,15 +321,17 @@ main section:nth-of-type(2){
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    
 }
 
 /* @media (min-width: 768px){
     
 } */
 
-/*PC portable*/
+/*Tablette*/
 @media (max-width: 1024px){
-    main section:nth-of-type(2){
+    aside{
         display: none
     }
     main{
